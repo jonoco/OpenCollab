@@ -1,0 +1,29 @@
+<div class="modal fade" id="joinCollabModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1>Join Collaboration</h1>
+        <p>Choose Available Position</p>
+      </div><!-- modal-header -->
+
+      <div class="modal-body">
+        <table class="table">
+          <tr ng-repeat="(key, position) in positions">
+            <td ng-show={{position.attributes.available}}>{{position.attributes.role}}</td>
+            <td ng-show={{position.attributes.available}}>{{position.attributes.skill}}</td>
+            <td ng-show={{position.attributes.available}}>{{position.attributes.task}}</td>
+            <td ng-show={{position.attributes.available}}>
+              <button class="btn btn-primary" ng-click="requestPosition(position)">
+                Request Position</button></td>
+          </tr>
+        </table>
+        <p class="msg" ng-show="message">{{message.text}}</p><!-- msg -->
+      </div><!-- modal-body -->
+
+      <div class="modal-footer">
+        <button class="close" data-dismiss="modal">Close</button>
+      </div><!-- modal-footer -->
+    </div><!-- modal-content -->
+  </div><!-- moda-dialogue -->
+</div><!-- modal --> 

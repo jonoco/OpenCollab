@@ -1,0 +1,36 @@
+<section>
+	<div class="container">
+		<div class="splash">
+			<h1>Open Collaboration</h1>
+			<p>Join an open collaborative project or start your own</p>
+			<div class="buttons">
+				<a href="#/collaborations">Join a team</a>
+				<a ng-click="startCollab()">Start a collaboration</a>
+				<!-- <a data-toggle="modal" data-target="#make-collab">Start a collaboration</a> -->
+			</div>
+
+		</div><!-- jumbotron -->
+
+		<div class="main-area">
+			
+			<div class="column">
+				<h3>Open Collaborations</h3>
+				<div ng-repeat="(key, collab) in collaborations">
+					<a ng-href="#/collaborations/{{collab.link}}">{{collab.name}}</a>
+					
+				</div>
+			</div><!-- column -->
+			
+			<div class="column">
+				<h3>Open Positions</h3>
+				<div ng-repeat="(k, position) in positions">
+					<a href="#/">{{position.role}}: {{position.skill}}</a>
+				</div>
+			</div><!-- column -->
+		</div><!-- main-area -->
+
+	</div><!-- container -->
+	<make-Project-Modal></make-Project-Modal>
+	<register-modal></register-modal>
+	<login-modal></login-modal>
+</section>

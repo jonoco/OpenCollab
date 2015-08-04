@@ -1,0 +1,57 @@
+<section>
+	<div class="container collaboration-page">
+		<h1>Project Page</h1>
+		<div class="info">
+			<p><span class="title">Project Name: </span>{{project.name}}</p>
+			<p><span class="title">Category: </span>{{project.category}}</p>
+			<p><span class="title">Description: </span>{{project.description}}</p>
+		</div><!-- info -->
+
+		<div class="goals">
+			<p><span class="title">Goals: </span></p>
+		</div><!-- goals -->
+		
+		<div class="positions">
+			<p><span class="title">Open Positions: </span>{{project.position}}</p>
+			<table class="table">
+				<tr>
+					<th>Role</th>
+					<th>Skill</th>
+					<th>Task</th>
+				</tr>
+				<tr ng-repeat="(key, position) in positions">
+					<td ng-show={{position.attributes.available}}>{{position.attributes.role}}</td>
+					<td ng-show={{position.attributes.available}}>{{position.attributes.skill}}</td>
+					<td ng-show={{position.attributes.available}}>{{position.attributes.task}}</td>
+				</tr>
+			</table>
+		</div><!-- positions -->
+		
+		<div class="members">
+			<p><span class="title">Current Members: </span></p>
+			<table class="table">
+				<tr>
+					<th>Role</th>
+					<th>Skill</th>
+					<th>Task</th>
+				</tr>
+				<tr ng-repeat="(key, position) in positions">
+					<td ng-hide={{position.attributes.available}}>{{position.attributes.role}}</td>
+					<td ng-hide={{position.attributes.available}}>{{position.attributes.skill}}</td>
+					<td ng-hide={{position.attributes.available}}>{{position.attributes.task}}</td>
+				</tr>
+			</table>
+		</div><!-- members -->
+
+		<div class="details">
+			<p><span class="title">Details: </span></p>
+			<p>{{project.details}}</p>
+		</div><!-- details -->
+
+		<div class="controls">
+			<button class="btn btn-primary btn-lg" data-toggle="modal" href="#joinCollabModal">Join This Collaboration</button>
+			<button class="btn btn-default btn-lg">Message The Project Lead</button>
+		</div><!-- controls -->
+	</div><!-- container -->
+	<join-collab-modal></join-collab-modal>
+</section>

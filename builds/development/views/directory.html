@@ -1,0 +1,11 @@
+<section>
+	<div class="container">
+		<h1>Collaborations</h1>
+		<div class="collaboration" ng-repeat="(key, collab) in collaborations">
+			<h2><a ng-href="#/collaborations/{{collab.link}}">{{collab.name}}</a></h2>
+			<h3>{{collab.category}}</h3>
+			<h4>{{collab.description}}</h4>
+			<h4>{{collab.positions.length}} Positions Available</h4>
+		</div>
+	</div><!-- container -->
+</section>

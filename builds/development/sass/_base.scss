@@ -1,0 +1,46 @@
+body {
+  margin-top: 70px;
+  font-size: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #475b62;
+  text-shadow: 1px 1px #eee;
+  margin: 0 0 10px 0;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+input {
+  color: #475B62;
+  background: rgba(255,255,255,1);
+  border: 1px solid white;
+  border-radius: 10px;
+  outline: 0;
+  padding: 4px;
+}
+
+.btn:hover { 
+  background-color: darken($grey, 36%);
+}
+
+/* Alert and Error styles */
+
+.error {
+  color: #D11404;
+}
+
+.ng-dirty.ng-invalid {
+  border-color: #D11404;
+}
+
+.ng-dirty.ng-valid {
+  border-color: #21D153;
+}
+
+.alert {
+  margin-top: 10px;
+  a { margin-left: 20px; }
+}

@@ -1,0 +1,23 @@
+.jumbotron {
+  @extend .box;
+}
+
+.std-style {
+	background-color: $grey;
+	padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 3px;
+  margin: 10px 10px;
+}
+
+.box {
+  max-width: 960px;
+  margin: 10px auto;
+  border-color: $grey;
+  border: 1px solid $grey;
+}
+
+.clear {
+	overflow: auto;
+}

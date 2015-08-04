@@ -1,0 +1,17 @@
+<section>
+	<div class="container user-page">
+		<h1>User Page</h1>
+		<div>
+			<h2>My Projects</h2>
+			<div ng-repeat="(key, project) in user.projects">
+				<a ng-href="#/collaborations/{{project.attributes.link}}">{{project.attributes.name}}</a>
+			</div>
+		</div>
+		<div>
+			<h2>My Collaborations</h2>
+			<div ng-repeat="(key, collab) in user.collaborations">
+				<a ng-href="#/collaborations/{{collab.attributes.link}}">{{collab.attributes.name}}</a>
+			</div>
+		</div>
+	</div><!-- container user-page -->
+</section>

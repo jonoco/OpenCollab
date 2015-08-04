@@ -1,0 +1,17 @@
+{
+  "name": "_scaffold",
+  "version": "0.0.1",
+  "description": "a simple scaffolding structure",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-util": "^3.0.4",
+    "gulp-webserver": "^0.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Joshua Cox"
+}
